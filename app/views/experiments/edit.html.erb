@@ -1,6 +1,14 @@
-<h1>Editing Experiment</h1>
+<div class="card">
+  <div class="card-header">
+    <h1>Edit Experiment <%= @experiment.experiment_id %></h1>
+  </div>
+  <div class="card-body">
+    <%= render 'form', experiment: @experiment %>
+  </div>
+</div>
 
-<%= render 'form', experiment: @experiment %>
 
+<!--
 <%= link_to 'Show', @experiment %> |
 <%= link_to 'Back', experiments_path %>
+-->

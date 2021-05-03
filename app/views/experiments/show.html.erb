@@ -20,5 +20,11 @@
   <%= @experiment.config %>
 </p>
 
-<%= link_to 'Edit', edit_experiment_path(@experiment) %> |
-<%= link_to 'Back', experiments_path %>
+<%= link_to 'Edit', edit_experiment_path(@experiment), class: "btn btn-secondary" %>
+<%=
+  link_to 'Delete',
+  @experiment,
+  method: :delete,
+  data: { confirm: 'Are you sure?' },
+  class: "btn btn-danger"
+%>
