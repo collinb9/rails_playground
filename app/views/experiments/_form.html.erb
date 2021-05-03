@@ -1,0 +1,50 @@
+<%= form_with(model: experiment) do |form| %>
+  <% if experiment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(experiment.errors.count, "error") %> prohibited this experiment from being saved:</h2>
+
+      <ul>
+        <% experiment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :experiment_id %>
+    <%= form.text_field :experiment_id, class: "form-control", placeholder: "experiment id" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", placeholder: "experiment name" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :image %>
+    <%= form.text_field :image, class: "form-control", placeholder: "docker image" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :config %>
+    <%= form.text_field :config, class: "form-control", placeholder: "configuration file" %>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :user_id %>
+    <%=
+      form.number_field :user_id,
+      id: :experiment_user_id,
+      class: "form-control",
+      value: current_user.id,
+      type: :hidden
+    %>
+  </div>
+
+  <br/>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

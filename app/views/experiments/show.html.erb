@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Experiment:</strong>
+  <%= @experiment.experiment_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @experiment.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @experiment.image %>
+</p>
+
+<p>
+  <strong>Config:</strong>
+  <%= @experiment.config %>
+</p>
+
+<%= link_to 'Edit', edit_experiment_path(@experiment) %> |
+<%= link_to 'Back', experiments_path %>
