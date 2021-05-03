@@ -76,6 +76,6 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  config.hosts << "efab55e688fd03364e727c8cca2e7ea9.loophole.site"
+  config.hosts << "6a432846edbd02ddc4f0d8fe9e2fc628.loophole.site"
 
 end
